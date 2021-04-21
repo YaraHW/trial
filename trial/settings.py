@@ -23,6 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-*non34%m!j=_q5+x*1t6^x49-q&w=cpps4-2z2xq-=2&!=g0bl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+#when DEBUG is True, Django will display a detailed traceback,
+# including a lot of metadata about your environment, such as all the currently defined Django settings (from settings.py).
+
 DEBUG = True
 
 ALLOWED_HOSTS = []

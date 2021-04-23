@@ -8,5 +8,5 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('test', views.test, name='test'),
     path('trial', views.trial, name='trial'),   #path('trial' - trial это сам url
-    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),git
 ]

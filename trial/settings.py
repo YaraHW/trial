@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'catalog.apps.CatalogConfig', # регистрируем созданную папку (catalog) с приложением
+    'accountsregistration.apps.AccountsregistrationConfig',  # Приложение регистрации
+
 ]
 
 MIDDLEWARE = [
@@ -135,3 +137,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = '/'  # Redirect to home URL after login (Default redirects to /accounts/profile/)
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+AUTH_PROFILE_MODULE = 'habr.profile.profile'
+

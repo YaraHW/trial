@@ -1,6 +1,5 @@
 from django.urls import path, include
 from django.contrib import admin
-from django.contrib import auth
 from . import views
 
 urlpatterns = [
@@ -9,4 +8,6 @@ urlpatterns = [
     path('test', views.test, name='test'),
     path('trial', views.trial, name='trial'),   #path('trial' - trial это сам url
     path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/', include('accountsregistration.urls')),   # url на страницу регистрации нового пользователя
+
 ]

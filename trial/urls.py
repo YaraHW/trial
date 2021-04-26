@@ -1,13 +1,11 @@
 from django.urls import path, include
 from django.contrib import admin
 from . import views
+from .views import SignUpView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('test', views.test, name='test'),
-    path('trial', views.trial, name='trial'),   #path('trial' - trial это сам url
     path('accounts/', include('django.contrib.auth.urls')),
-    path('accounts/', include('accountsregistration.urls')),   # url на страницу регистрации нового пользователя
-
+    path('accounts/signup/', SignUpView.as_view(), name='signup'),
 ]

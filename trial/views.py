@@ -1,14 +1,13 @@
-from django.http import HttpResponse
 from django.shortcuts import render
+from django.contrib.auth.forms import UserCreationForm
+from django.urls import reverse_lazy
+from django.views import generic
 
 
 def index(request):
     return render(request, './base_generic.html')
 
-    # return HttpResponse("Hello, world. You're at the polls index.")
-
-def test(request):
-    return HttpResponse("TEST")    # TEST - текст отображенный по url  http://localhost:8100/test
-
-def trial(request):
-    return HttpResponse("TRIAL")
+class SignUpView(generic.CreateView):
+    form_class = UserCreationForm
+    success_url = reverse_lazy('login')
+    template_name = 'registration/signup.html'

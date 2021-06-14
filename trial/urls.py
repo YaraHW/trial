@@ -13,3 +13,5 @@ urlpatterns = [
 
     path('accounts/', include('django.contrib.auth.urls')),
 ]
+
+#smth added

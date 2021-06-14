@@ -35,6 +35,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'bootstrap5',
     'django.contrib.admin',
     'django.contrib.auth',  # Фреймворк аутентификации и моделей по умолчанию.
     'django.contrib.contenttypes',  # Django контент-типовая система (даёт разрешения, связанные с моделями).

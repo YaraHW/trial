@@ -7,7 +7,11 @@ from django.views import generic
 def index(request):
     return render(request, './base_generic.html' )
 
+def playgame(request):
+    return render(request, './play_game.html')
+
 class SignUpView(generic.CreateView):
     form_class = UserCreationForm
     success_url = reverse_lazy('login')
     template_name = 'registration/signup.html'
+

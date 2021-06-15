@@ -27,7 +27,7 @@
   <div class="nav-item">
   <div class="col-sm-2">
 
-    {% block sidebar %}
+{% block sidebar %}
   <ul class="nav flex-column">
     <li class="nav-item">
       <a class="nav-link active" href="{% url 'index' %}">Home</a>
@@ -45,9 +45,9 @@
     {% endif %}
   {% if user.is_authenticated %}  {# Тут я проверяю - если юзер вошел в систему то для него появится кнопка play game #}
     <a href="{% url 'play_game' %}" class="btn btn-info" role="button">Play Game</a>
-  {% else %}  {# следовательно если он не авторизован - то кнопки не будет #}
-  {% endif %}
-     {% endblock %}
+    {% else %}  {# следовательно если он не авторизован - то кнопки не будет #}
+    {% endif %}
+{% endblock %}
 
   </div>
   </div>

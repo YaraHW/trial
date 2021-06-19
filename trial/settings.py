@@ -14,7 +14,7 @@ from pathlib import Path
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent # полный путь к директории проекта
 
 
 # Quick-start development settings - unsuitable for production
@@ -29,13 +29,12 @@ SECRET_KEY = 'django-insecure-*non34%m!j=_q5+x*1t6^x49-q&w=cpps4-2z2xq-=2&!=g0bl
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [] # те доменты/хосты на которых мы разрешаем опубликовать наш проект
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'bootstrap5',
     'django.contrib.admin',
     'django.contrib.auth',  # Фреймворк аутентификации и моделей по умолчанию.
     'django.contrib.contenttypes',  # Django контент-типовая система (даёт разрешения, связанные с моделями).
@@ -45,7 +44,7 @@ INSTALLED_APPS = [
 
 ]
 
-MIDDLEWARE = [
+MIDDLEWARE = [  # промежуточное ПО
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',   # Управление сессиями между запросами
     'django.middleware.common.CommonMiddleware',
@@ -128,8 +127,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+
+
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')  # по видеоуроку оно должно быть, я отключил и заработало - хз почему
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static"
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
